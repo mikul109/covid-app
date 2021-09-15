@@ -1,0 +1,15 @@
+.Select--single .Select-value {
+    color: #003EFF;
+}
+
+.Select-value-label {
+    color: #c6c6c6 !important;
+}
+
+.Select-control {
+    background-color: #242a44 !important;
+}
+
+.Select-menu-outer {
+    background-color: #242a44;
+}
