@@ -2,18 +2,13 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-from dash_html_components import Img
-from dash_html_components.Div import Div
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
-import pandas as pd
-import numpy as np
 from datetime import datetime
-from datetime import date
+import numpy as np
+import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from scipy.sparse import data
-from statsmodels.tsa.arima_model import ARIMA
 import pmdarima as pm
 
 ### load data from Johns Hopkins github repository
@@ -209,6 +204,7 @@ country_list = country_list[country_list['country'] != 'US (Aggregate)']
 
 ####################################### app UI #######################################
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.SOLAR])
+server = app.server
 
 PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 
