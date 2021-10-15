@@ -13,3 +13,45 @@
 .Select-menu-outer {
     background-color: #242a44;
 }
+
+#page-container {
+    width: 100%;
+}
+
+#card-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 2;
+}
+
+#map-row {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    margin: 5;
+}
+
+#country-grid {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 49% 49%;
+    gap: 1em;
+    padding: 2em;
+}
+
+#filter-container {
+    width: 40%;
+    margin: auto;
+
+}
+
+p {
+    font-size: 1vw
+}
+
+h4 {
+    font-size: 2vw
+}
+
+h5 {
+    font-size: 1vw
+}
