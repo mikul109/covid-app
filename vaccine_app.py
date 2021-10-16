@@ -247,7 +247,7 @@ navbar = dbc.Navbar(
 )
 
 app.layout = html.Div(
-    style={'backgroundColor': colors['background'], 'height': 2850},
+    style={'backgroundColor': colors['background'], 'height': 3000},
     children=[
         html.Div(id="page-container", children=[navbar]),
 
@@ -488,18 +488,41 @@ app.layout = html.Div(
 
         html.Div(id="country-grid", children=
         [
-            # country covid cases
-            dcc.Graph(id='case', style={'height': 400, 'width': '100%'}
-                      ),
-            # country covid deaths
-            dcc.Graph(id='death', style={'height': 400, 'width': '100%', }
-                      ),
             # country doses
             dcc.Graph(id='dose', style={'height': 400, 'width': '100%', 'margin-bottom': 10}
                       ),
             # country full vax
             dcc.Graph(id='fullvax', style={'height': 400, 'width': '100%', 'margin-bottom': 10}
                       ),
+            # country covid cases
+            dcc.Graph(id='case', style={'height': 400, 'width': '100%'}
+                      ),
+            # country covid deaths
+            dcc.Graph(id='death', style={'height': 400, 'width': '100%', }
+                      ),
+        ]),
+
+        html.Div(children=
+        [
+            html.H4("DATA:",
+                style={'text-indent': 30, 'color': colors['text'], 'display': 'block'}
+                ),
+            html.P("COVID-19 Spread:",
+                style={'text-indent': 30, 'color': colors['text'], 'display': 'inline-block'}
+                ),
+            html.A("CSSE at Johns Hopkins University", href = "https://github.com/CSSEGISandData/COVID-19",
+                style={'text-indent': 5, 'color': '#339966', 'display': 'inline-block'}
+                ),
+        ]),
+
+        html.Div(children=
+        [            
+            html.P("Vaccinations:",
+                style={'text-indent': 30, 'color': colors['text'], 'display': 'inline-block'}
+                ),
+            html.A("Johns Hopkins Centers for Civic Impact", href = "https://github.com/govex/COVID-19",
+                style={'text-indent': 5, 'color': '#339966', 'display': 'inline-block'}
+                ),
         ]),
 
     ])
